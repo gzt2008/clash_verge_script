@@ -1,2 +1,2 @@
-# clash_verge_script-
+# clash_verge_script
 自用clash防dns泄露扩展脚本
