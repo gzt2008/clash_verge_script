@@ -398,7 +398,7 @@ function main(config) {
     // --- 应用分流组 ---
     {
       ...groupBaseOption,
-      "name": "💬 Ai",
+      "name": "💬 OpenAi",
       "type": "select",
       "proxies": ["♻️ 自动选择", "🇨🇳 台湾节点", "🇸🇬 新加坡节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🇰🇷 韩国节点"],
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
