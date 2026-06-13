@@ -307,7 +307,7 @@ proxy-groups:
     filter: "^(?!.*(官网|套餐|流量|异常|剩余)).*$"
     interval: 300
     tolerance: 50
-    url: "https://www.google.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"
 
   # --- 地区分组 (带自动测速) ---
@@ -317,7 +317,7 @@ proxy-groups:
     filter: "(?i)港|HK|hk|Hong Kong|HongKong|hongkong"
     interval: 300
     tolerance: 50
-    url: "https://www.google.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/hk.svg"
 
   - name: "🇨🇳 台湾节点"
@@ -326,7 +326,7 @@ proxy-groups:
     filter: "(?i)台|新北|彰化|TW|Taiwan"
     interval: 300
     tolerance: 50
-    url: "https://www.google.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/cn.svg"
 
   - name: "🇸🇬 新加坡节点"
@@ -335,7 +335,7 @@ proxy-groups:
     filter: "(?i)新加坡|坡|狮城|SG|Singapore"
     interval: 300
     tolerance: 50
-    url: "https://www.google.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/sg.svg"
 
   - name: "🇯🇵 日本节点"
@@ -344,7 +344,7 @@ proxy-groups:
     filter: "(?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan"
     interval: 300
     tolerance: 50
-    url: "https://www.google.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/jp.svg"
 
   - name: "🇺🇲 美国节点"
@@ -353,7 +353,7 @@ proxy-groups:
     filter: "(?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States"
     interval: 300
     tolerance: 50
-    url: "https://www.google.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/us.svg"
 
   - name: "🇰🇷 韩国节点"
@@ -362,7 +362,7 @@ proxy-groups:
     filter: "(?i)KR|Korea|KOR|首尔|韩|韓"
     interval: 300
     tolerance: 50
-    url: "https://www.google.com/generate_204"
+    url: "https://www.gstatic.com/generate_204"
     icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/kr.svg"
 
   - name: "🎥 奈飞节点"
