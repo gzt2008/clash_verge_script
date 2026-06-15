@@ -62,6 +62,12 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
     "path": "./ruleset/reject.yaml"
   },
+  "adblock": {
+    ...ruleProviderCommon,
+    "behavior": "domain",
+    "url": "https://gcore.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/adblockmihomo.yaml",
+    "path": "./ruleset/adblock.yaml"
+  },
   "applications": {
     ...ruleProviderCommon,
     "behavior": "classical",
@@ -234,7 +240,7 @@ const ruleProviders = {
 
 // 规则
 const rules = [
-  // 1. 本地与直连 (Loyalsoldier)
+  // 1. 本地与直连 
   "RULE-SET,applications,🎯 全球直连",
   "RULE-SET,private,🎯 全球直连",
   "RULE-SET,lancidr,🎯 全球直连,no-resolve",
@@ -243,8 +249,9 @@ const rules = [
 
   // 2. 广告拦截
   "RULE-SET,reject,🛑 广告拦截",
+  "RULE-SET,adblock,🛑 广告拦截",
 
-  // 3. 特定应用分流 (ACL4SSR)
+  // 3. 特定应用分流 
   "RULE-SET,OpenAi,💬 OpenAi",
   "RULE-SET,Telegram,📲 电报消息",
   "RULE-SET,YouTube,📹 油管视频",
@@ -260,13 +267,13 @@ const rules = [
   "RULE-SET,Sony,🎮 游戏平台",
   "RULE-SET,Nintendo,🎮 游戏平台",
 
-  // 5. 微软与苹果 (ACL4SSR)
+  // 5. 微软与苹果 
   "RULE-SET,Bing,Ⓜ️ 微软Bing",
   "RULE-SET,OneDrive,Ⓜ️ 微软云盘",
   "RULE-SET,Microsoft,Ⓜ️ 微软服务",
   "RULE-SET,Apple,🍎 苹果服务",
 
-  // 6. Google 分流 (ACL4SSR)
+  // 6. Google 分流 
   "RULE-SET,GoogleFCM,📢 谷歌FCM",
   "RULE-SET,GoogleCN,🎯 全球直连",
 
@@ -274,7 +281,7 @@ const rules = [
   "RULE-SET,ChinaMedia,🌏 国内媒体",
   "RULE-SET,ProxyMedia,🌍 国外媒体",
 
-  // 8. 通用代理 (Loyalsoldier)
+  // 8. 通用代理 
   "RULE-SET,gfw,🚀 节点选择",
   "RULE-SET,tld-not-cn,🚀 节点选择",
   "RULE-SET,proxy,🚀 节点选择",
@@ -289,7 +296,7 @@ const rules = [
 const groupBaseOption = {
   "interval": 300,
   "timeout": 3000,
-  "url": "https://www.gstatic.com/generate_204",
+  "url": "https://www.google.com/generate_204",
   "lazy": true,
   "max-failed-times": 3,
   "hidden": false
