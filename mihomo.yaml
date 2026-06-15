@@ -57,6 +57,14 @@ rule-providers:
     behavior: domain
     url: "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
     path: "./ruleset/reject.yaml"
+    
+  adblock:
+    type: http
+    format: yaml
+    interval: 86400
+    behavior: domain
+    url: "https://gcore.jsdelivr.net/gh/217heidai/adblockfilters@main/rules/adblockmihomolite.yaml"
+    path: "./ruleset/adblock.yaml"
   
   applications:
     type: http
@@ -536,17 +544,18 @@ proxy-groups:
 
 # ================= 规则 rules =================
 rules:
-  # --- 1. 本地与直连 (Loyalsoldier) ---
+  # --- 1. 本地与直连  ---
   - "RULE-SET,applications,🎯 全球直连"
   - "RULE-SET,private,🎯 全球直连"
   - "RULE-SET,lancidr,🎯 全球直连,no-resolve"
   - "RULE-SET,cncidr,🎯 全球直连,no-resolve"
   - "RULE-SET,direct,🎯 全球直连"
 
-  # --- 2. 广告拦截 (Loyalsoldier) ---
+  # --- 2. 广告拦截  ---
   - "RULE-SET,reject,🛑 广告拦截"
+  - "RULE-SET,adblock,🛑 广告拦截"
 
-  # --- 3. 特定应用分流 (ACL4SSR 优先) ---
+  # --- 3. 特定应用分流  ---
   - "RULE-SET,OpenAi,💬 OpenAi"
   - "RULE-SET,Telegram,📲 电报消息"
   - "RULE-SET,YouTube,📹 油管视频"
@@ -556,28 +565,27 @@ rules:
   - "RULE-SET,Bilibili,📺 哔哩哔哩"
   - "RULE-SET,NetEaseMusic,🎶 网易音乐"
   
-  # --- 4. 游戏平台 (ACL4SSR) ---
+  # --- 4. 游戏平台  ---
   - "RULE-SET,Steam,🎮 游戏平台"
   - "RULE-SET,Epic,🎮 游戏平台"
   - "RULE-SET,Sony,🎮 游戏平台"
   - "RULE-SET,Nintendo,🎮 游戏平台"
 
-  # --- 5. 微软与苹果 (ACL4SSR) ---
+  # --- 5. 微软与苹果  ---
   - "RULE-SET,Bing,Ⓜ️ 微软Bing"
   - "RULE-SET,OneDrive,Ⓜ️ 微软云盘"
   - "RULE-SET,Microsoft,Ⓜ️ 微软服务"
   - "RULE-SET,Apple,🍎 苹果服务"
 
-  # --- 6. Google 分流 (ACL4SSR) ---
+  # --- 6. Google 分流  ---
   - "RULE-SET,GoogleFCM,📢 谷歌FCM"
   - "RULE-SET,GoogleCN,🎯 全球直连"
 
-  # --- 7. 媒体分流 (ACL4SSR) ---
+  # --- 7. 媒体分流  ---
   - "RULE-SET,ChinaMedia,🌏 国内媒体"
   - "RULE-SET,ProxyMedia,🌍 国外媒体"
 
-  # --- 8. 通用代理 (Loyalsoldier) ---
-  # 注意：GFW 和 Proxy 规则集作为兜底，捕获未被上述规则匹配的需要代理的域名
+  # --- 8. 通用代理  ---
   - "RULE-SET,gfw,🚀 节点选择"
   - "RULE-SET,tld-not-cn,🚀 节点选择"
   - "RULE-SET,proxy,🚀 节点选择"
