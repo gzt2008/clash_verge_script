@@ -392,15 +392,6 @@ function main(config) {
       "tolerance": 50,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/kr.svg"
     },
-    {
-      ...groupBaseOption,
-      "name": "🎥 奈飞节点",
-      "type": "select",
-      "include-all": true,
-      "filter": "(?i)NF|奈飞|解锁|Netflix|NETFLIX|Media",
-      "proxies": ["🚀 节点选择"],
-      "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/netflix.svg"
-    },
 
     // --- 应用分流组 ---
     {
@@ -428,7 +419,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "🎥 奈飞视频",
       "type": "select",
-      "proxies": ["🎥 奈飞节点", "🚀 节点选择", "🇸🇬 新加坡节点", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点"],
+      "proxies": ["🚀 节点选择", "🇸🇬 新加坡节点", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点"],
       "icon": "https://fastly.jsdelivr.net/gh/xiaolin-007/clash@main/icon/netflix.svg"
     },
     {
